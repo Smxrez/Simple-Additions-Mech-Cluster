@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<Defs>
+
+  <ThingDef ParentName="MechBuildingBase">
+    <defName>SA_HeavyMechDropBeacon</defName>
+    <label>superheavy mech drop beacon</label>
+    <description>A mechanoid reinforcement drop beacon. When activated, it calls in a superheavy mechanoid to land in a drop pod nearby.</description>
+    <size>(1,2)</size>
+    <pathCost>30</pathCost>
+    <tickerType>Normal</tickerType>
+    <fillPercent>0.25</fillPercent>
+    <receivesSignals>true</receivesSignals>
+    <drawerType>MapMeshOnly</drawerType>
+    <statBases>
+      <MaxHitPoints>175</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>LargeMechDropBeacon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,2)</drawSize>
+      <shadowData>
+        <volume>(0.6, 0.6, 1.5)</volume>
+      </shadowData>
+      <damageData>
+        <rect>(0.3, 0.3, 0.4, 0.4)</rect>
+      </damageData>
+    </graphicData>
+    <building>
+      <combatPower>700</combatPower>
+      <buildingTags>
+        <li>MechClusterCombatThreat</li>
+      </buildingTags>
+      <minMechClusterPoints>2500</minMechClusterPoints>
+      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
+    </building>
+    <comps>
+      <li Class="CompProperties_CanBeDormant">
+        <compClass>CompMechanoid</compClass>
+        <awakeStateLabelKey>DormantCompExpired</awakeStateLabelKey>
+        <dormantStateLabelKey>DormantCompBeacon</dormantStateLabelKey>
+      </li>
+      <li Class="CompProperties_WakeUpDormant">
+        <wakeUpSound>MechanoidsWakeUp</wakeUpSound>
+      </li>
+      <li Class="CompProperties_PawnSpawnOnWakeup">
+        <points>600~800</points>
+        <dropInPods>True</dropInPods>
+        <pawnSpawnRadius>10~30</pawnSpawnRadius>
+        <spawnEffecter>MechDropBeaconActivated</spawnEffecter>
+        <activatedMessageKey>MessageMechanoidsReinforcementsDrop</activatedMessageKey>
+        <spawnablePawnKinds>
+          <li>Mech_Diabolus</li>
+          <li>Mech_Warqueen</li>
+          <li>Mech_Apocriton</li>
+        </spawnablePawnKinds>
+        <lordJob>LordJob_MechanoidsDefend</lordJob>
+        <shouldJoinParentLord>True</shouldJoinParentLord>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(216,219,67,0)</glowColor>
+      </li>
+    </comps>
+    <costList>
+      <Plasteel>14</Plasteel>
+    </costList>
+  </ThingDef>
+
+</Defs>
