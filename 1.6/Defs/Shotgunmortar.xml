@@ -83,7 +83,7 @@
         <li>MechClusterMember</li>
         <li>MechClusterProblemCauser</li>
       </buildingTags>
-      <combatPower>220</combatPower>
+      <combatPower>250</combatPower>
       <turretGunDef>SA_Artillery_AutoToxMortar</turretGunDef>
       <turretBurstWarmupTime>4.0</turretBurstWarmupTime>
       <turretBurstCooldownTime>40.0</turretBurstCooldownTime>

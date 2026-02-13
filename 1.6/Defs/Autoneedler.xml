@@ -31,7 +31,7 @@
       <MaxHitPoints>180</MaxHitPoints>
       <Flammability>0</Flammability>
       <Mass>100</Mass>
-      <ShootingAccuracyTurret>0.95</ShootingAccuracyTurret>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
       <Beauty>-20</Beauty>
     </statBases>
     <damageMultipliers>
@@ -86,6 +86,7 @@
       <turretBurstCooldownTime>4</turretBurstCooldownTime>
       <turretTopDrawSize>1.75</turretTopDrawSize>
       <turretTopOffset>(0, 0.05)</turretTopOffset>
+      <minMechClusterPoints>570</minMechClusterPoints>
     </building>
     <uiIconScale>0.95</uiIconScale>
   </ThingDef>
@@ -101,6 +102,10 @@
     <uiIconScale>2</uiIconScale>
     <statBases>
       <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+      <AccuracyTouch>0.27</AccuracyTouch>
+      <AccuracyShort>0.39</AccuracyShort>
+      <AccuracyMedium>0.39</AccuracyMedium>
+      <AccuracyLong>0.15</AccuracyLong>
     </statBases>
     <verbs>
       <li>
@@ -125,9 +130,6 @@
       <texPath>Things/Projectile/ToxicNeedleShot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <statBases>
-      <AccuracyLong>0.10</AccuracyLong>
-    </statBases>
     <projectile>
       <damageDef>BulletToxic</damageDef>
       <damageAmountBase>4</damageAmountBase>

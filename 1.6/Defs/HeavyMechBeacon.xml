@@ -31,7 +31,7 @@
       <buildingTags>
         <li>MechClusterCombatThreat</li>
       </buildingTags>
-      <minMechClusterPoints>2500</minMechClusterPoints>
+      <minMechClusterPoints>3500</minMechClusterPoints>
       <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
     </building>
     <comps>
